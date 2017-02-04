@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="WikipediaAngularApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>Wiki OpenSearch Web App</title>
+
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+      <link href="https://fonts.googleapis.com/css?family=Barrio|Roboto+Condensed|Slabo+27px" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+
+  <body ng-controller="Controller as control">
+  <div id="main">
+    <div class="title">
+      <h1>Wikipedia Search</h1>
+    </div>
+
+    <div class="search">
+      <form ng-submit="search()">
+        <input id="Wikisearch" type="text" ng-model="searchtext" />
+      </form>
+    </div>
+    
+    <div class="content" ng-repeat="title in titles">
+      <ul>
+        <a href="{{links[$index]}}">
+        <li>
+          <b>{{title}}</b>  
+          <p> {{details[$index]}}</p>
+        </li>
+        </a>
+          </ul>
+    </div>
+
+  </div>
+  </body>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.2/angular-animate.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+</html>
