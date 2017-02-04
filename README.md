@@ -1,2 +1,2 @@
-# Wikipedia-Search-App
-Using Wikipedia's API, the app searches displays any relevant wikipedia pages based on the user's keyword inputs.
+# Angular JS Web Application
+Angular  JS web Application which uses angularJS, Jquery and OpenSearch API (Wikipedia)
